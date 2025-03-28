@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sun, Home, Battery, LineChart } from 'lucide-react';
 
 function Services() {
