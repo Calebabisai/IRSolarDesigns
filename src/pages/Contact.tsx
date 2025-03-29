@@ -99,8 +99,8 @@ function Contact() {
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Address</h3>
                   <p className="mt-1 text-gray-600">
-                    123 Solar Street<br />
-                    Sunshine City, SC 12345
+                    123 Solar NARNIA<br />
+                    NARNIA, CA 99999
                   </p>
                 </div>
               </div>
@@ -108,7 +108,7 @@ function Contact() {
                 <Phone className="h-6 w-6 text-yellow-500 mt-1" />
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="mt-1 text-gray-600">(555) 123-4567</p>
+                  <p className="mt-1 text-gray-600">(000) 000-0000</p>
                 </div>
               </div>
               <div className="flex items-start">

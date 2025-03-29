@@ -3,38 +3,36 @@ import { Link } from 'react-router-dom';
 function Pricing() {
   const plans = [
     {
-      name: "Basic Solar",
-      price: "8,999",
+      name: "PV Solar Design",
+      price: "9,9999,999",
       features: [
         "4kW Solar System",
-        "Basic Installation",
-        "10-Year Warranty",
-        "Basic Monitoring System",
+        "Text",
+        "2 days ready",
+        "Basic Info",
         "Standard Inverter"
       ]
     },
     {
-      name: "Premium Solar",
-      price: "12,999",
+      name: "PV Solar Design + Battery",
+      price: "9,9999,999",
       features: [
-        "6kW Solar System",
-        "Premium Installation",
-        "15-Year Warranty",
-        "Advanced Monitoring",
-        "Premium Inverter",
-        "Battery Ready"
+        "4kW Solar System",
+        "Text",
+        "2 days ready",
+        "Basic Info",
+        "Standard Inverter"
       ]
     },
     {
-      name: "Complete Solar",
-      price: "16,999",
+      name: "Existing System + Pv Solar Design",
+      price: "9,9999,999",
       features: [
-        "8kW Solar System",
-        "Premium Installation",
-        "20-Year Warranty",
-        "Smart Monitoring",
-        "Premium Inverter",
-        "Battery Storage Included"
+        "4kW Solar System",
+        "Text",
+        "2 days ready",
+        "Basic Info",
+        "Standard Inverter"
       ]
     }
   ];
@@ -43,8 +41,8 @@ function Pricing() {
     <div className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">Solar Package Pricing</h2>
-          <p className="mt-4 text-gray-600">Choose the perfect solar solution for your home</p>
+          <h2 className="text-3xl font-bold text-gray-900">PV Solar Design Pricing</h2>
+          <p className="mt-4 text-gray-600">Choose the perfect solar solution for your design</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (

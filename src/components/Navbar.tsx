@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom';
-import { Sun } from 'lucide-react';
 
 function Navbar() {
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-17">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Sun className="h-8 w-8 text-yellow-500" />
-              <span className="ml-2 text-xl font-bold text-gray-900">IRSolarDesign</span>
+              <div className="relative overflow-visible" style={{ marginTop: '-10px' }}>
+                <img
+                  src="/src/assets/IRLOGO.PNG"
+                  alt="Logo IRSolarDesign"
+                  className="h-24 w-auto object-contain transform hover:scale-105 transition-transform duration-300" 
+                />
+              </div>
             </Link>
           </div>
           <div className="flex items-center">
