@@ -17,7 +17,7 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Simular un pequeño retraso para que la animación sea perceptible
+  // Animacion de retraso imagen de fondo 
   useEffect(() => {
     const timer = setTimeout(() => {
       setImageLoaded(true);
