@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function Pricing() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    //Animation when entering the page
+    setIsVisible(true);
+  }, []);
+
   const plans = [
     {
       name: "PV Solar Design",
@@ -40,13 +48,21 @@ function Pricing() {
   return (
     <div className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className={`text-center mb-12 transform transition-all duration-700 ${
+          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+        }`}>
           <h2 className="text-3xl font-bold text-gray-900">PV Solar Design Pricing</h2>
           <p className="mt-4 text-gray-600">Choose the perfect solar solution for your design</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div 
+              key={index} 
+              className={`bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-700 ${
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}
+              style={{ transitionDelay: `${150 * index}ms` }}
+            >
               <div className="px-6 py-8">
                 <h3 className="text-2xl font-bold text-center text-gray-900">{plan.name}</h3>
                 <div className="mt-4 text-center">

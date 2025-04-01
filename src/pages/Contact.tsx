@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 function Contact() {
+  const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: '',
   });
+
+  useEffect(() => {
+    // Activar la animación después de que el componente se monte
+    setIsVisible(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,9 +32,21 @@ function Contact() {
   return (
     <div className="bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`text-center mb-12 transform transition-all duration-700 ${
+          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+        }`}>
+          <h1 className="text-3xl font-bold text-gray-900">Contact Us</h1>
+          <p className="mt-4 text-gray-600">Get in touch for a free consultation</p>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div 
+            className={`bg-white p-8 rounded-lg shadow-lg transform transition-all duration-700 ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            }`}
+            style={{ transitionDelay: '150ms' }}
+          >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -91,7 +109,12 @@ function Contact() {
           </div>
 
           {/* Office Information */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div 
+            className={`bg-white p-8 rounded-lg shadow-lg transform transition-all duration-700 ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            }`}
+            style={{ transitionDelay: '300ms' }}
+          >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Office</h2>
             <div className="space-y-6">
               <div className="flex items-start">

@@ -55,7 +55,7 @@ function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p>© {new Date().getFullYear()} IRSolarDesign. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} IR Solar Designs. All rights reserved.</p>
         </div>
       </div>
     </footer>

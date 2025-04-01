@@ -1,18 +1,28 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sun, Leaf, DollarSign, Battery } from 'lucide-react';
+import Navbar from '../components/Navbar';
 
 function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsDarkMode(scrollPosition > 100);
+      setIsDarkMode(scrollPosition > 0.5);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Simular un pequeño retraso para que la animación sea perceptible
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setImageLoaded(true);
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   const benefits = [
@@ -40,16 +50,26 @@ function Home() {
 
   return (
     <div className={`transition-colors duration-500 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-      {/* Hero Section */}
+      {/* Hero Section with Navbar */}
       <div className="relative h-screen">
-        <div className="absolute inset-0 bg-cover bg-center z-0">
+        <div className="absolute inset-0 bg-cover bg-center z-0 overflow-hidden">
           <img 
             src="/src/assets/Homeimage.jpg" 
             alt="Background" 
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover transition-all duration-1500 ease-in-out ${
+              imageLoaded 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-110'
+            }`}
+            onLoad={() => setImageLoaded(true)}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className={`absolute inset-0 bg-black transition-opacity duration-1500 ${
+            imageLoaded ? 'bg-opacity-50' : 'bg-opacity-100'
+          }`}></div>
         </div>
+        
+        {/* Navbar inside the Hero section */}
+        <Navbar isHome={true} />
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-5xl font-bold mb-6 animate-fade-in">
@@ -149,6 +169,10 @@ function Home() {
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(40px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+
+        .duration-1500 {
+          transition-duration: 1500ms;
         }
       `}</style>
     </div>
