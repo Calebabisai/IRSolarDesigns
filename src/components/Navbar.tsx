@@ -17,7 +17,7 @@ function Navbar({ isHome: isHomeProp = false }: NavbarProps) {
             <Link to="/" className="flex items-center">
               <div className="relative overflow-visible" style={{ marginTop: '-10px' }}>
                 <img
-                  // Usa el logo alternativo en Home y el regular en otras páginas
+                  // Cambio de logo en Homo, IRLOGO => IRLOGOWHITE
                   src={isHome ? "/src/assets/IRLOGO_WHITE.PNG" : "/src/assets/IRLOGO.PNG"}
                   alt="Logo IRSolarDesign"
                   className="h-24 w-auto object-contain transform hover:scale-105 transition-transform duration-300" 

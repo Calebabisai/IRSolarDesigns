@@ -11,7 +11,7 @@ function Contact() {
   });
 
   useEffect(() => {
-    // Activar la animación después de que el componente se monte
+    // Animation open page 
     setIsVisible(true);
   }, []);
 
