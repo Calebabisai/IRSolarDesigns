@@ -11,7 +11,7 @@ function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-yellow-500 mr-2" />
-                <span>(555) 123-4567</span>
+                <span>(000) 000-0000</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-yellow-500 mr-2" />
@@ -19,7 +19,7 @@ function Footer() {
               </div>
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-yellow-500 mr-2" />
-                <span>123 Solar Street, Sunshine City, SC 12345</span>
+                <span>NARNIA 123, NARNIA, CA 91314</span>
               </div>
             </div>
           </div>

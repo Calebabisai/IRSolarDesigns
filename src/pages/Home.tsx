@@ -73,7 +73,7 @@ function Home() {
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            Powering Your Future with Solar Energy
+          Designing to power your future with solar energy
           </h1>
           <p className="text-xl mb-8 max-w-2xl animate-slide-up">
             Transform your home with sustainable energy solutions that save money and protect our planet
