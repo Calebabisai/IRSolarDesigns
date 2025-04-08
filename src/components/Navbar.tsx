@@ -38,7 +38,7 @@ function Navbar({ isHome: isHomeProp = false }: NavbarProps) {
                 <div className="relative overflow-visible" style={{ marginTop: '-10px' }}>
                   <img
                     src={isHome ? "/src/assets/IRLOGO_WHITE.PNG" : "/src/assets/IRLOGO.PNG"}
-                    alt="Logo IRSolarDesign"
+                    alt="Logo IRSolarDesigns"
                     className="h-20 md:h-24 w-auto object-contain transform hover:scale-105 transition-transform duration-300" 
                   />
                 </div>

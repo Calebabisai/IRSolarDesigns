@@ -1,11 +1,11 @@
+import { useState, useEffect } from 'react';
 import { Sun, Home, Battery, LineChart } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import SeoHead from '../components/SeoHead'; // Cambiado de SEO a SeoHead
 
 function Services() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    
     setIsVisible(true);
   }, []);
 
@@ -33,38 +33,45 @@ function Services() {
   ];
 
   return (
-    <div className="py-12 bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center transform transition-all duration-700 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`}>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Services</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className={`bg-white p-6 rounded-lg shadow-md transform transition-all duration-700 ${
-                isVisible 
-                  ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-10 opacity-0'
-              }`}
-              style={{ transitionDelay: `${150 * index}ms` }}
-            >
-              <div className="flex justify-center mb-4">
-                {service.icon}
+    <>
+      <SeoHead 
+        title="Professional Solar Installation Services | IR Solar Design" 
+        description="Our solar services include PV system design, installation, maintenance and energy efficiency consulting. Expert solutions for homes and businesses."
+        image="/src/assets/services-image.jpg"
+      />
+      <div className="py-12 bg-gray-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center transform transition-all duration-700 ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Services</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className={`bg-white p-6 rounded-lg shadow-md transform transition-all duration-700 ${
+                  isVisible 
+                    ? 'translate-y-0 opacity-100' 
+                    : 'translate-y-10 opacity-0'
+                }`}
+                style={{ transitionDelay: `${150 * index}ms` }}
+              >
+                <div className="flex justify-center mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-center">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-center">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
