@@ -80,7 +80,7 @@ function Navbar({ isHome: isHomeProp = false }: NavbarProps) {
           <div className="flex items-center">
             <img 
               src="/src/assets/IRLOGO_WHITE.PNG" 
-              alt="Logo IRSolarDesign" 
+              alt="Logo IRSolarDesigns" 
               className="h-12 w-auto mr-2" 
             />
             <h2 className="text-xl font-bold text-white">Menu</h2>
