@@ -15,7 +15,7 @@ function Footer() {
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-yellow-500 mr-2" />
-                <span>info@irsolardesigns.com</span>
+                <span>irsolardesigns@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-yellow-500 mr-2" />

@@ -31,8 +31,8 @@ function Home() {
   return (
     <>
       <SeoHead 
-        title="IR Solar Design - Powering Your Future with Solar Energy" 
-        description="Transform your home with sustainable energy solutions that save money and protect our planet. IR Solar Design offers premium solar installations."
+        title="IR Solar Designs - Powering Your Future with Solar Energy" 
+        description="Transform your home with sustainable energy solutions that save money and protect our planet. IR Solar Designs offers premium solar installations."
         image="/src/assets/Homeimage.jpg" // Image for SEO >>>>>>>>>>>>>>>
       />
       <div className={`transition-colors duration-500 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
@@ -80,26 +80,26 @@ function Home() {
         <div className={`py-16 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 animate-fade-in">
-              Solar Energy in Action
+              Solar Energy with style, without compromising performance
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                  src="/src/assets/CASA1.jpg" 
                   alt="Solar Installation" 
                   className="w-full h-64 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                  src="/src/assets/CASA2.webp" 
                   alt="Residential Solar" 
                   className="w-full h-64 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1542336291-d85a3648dae8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                  src="/src/assets/CASA3.webp" 
                   alt="Solar Technology" 
                   className="w-full h-64 object-cover"
                 />

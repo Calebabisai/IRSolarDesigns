@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, Leaf, DollarSign, Battery } from 'lucide-react';
+import {  Check, DollarSign, Zap, Headset } from 'lucide-react';
 
 type BenefitsProps = {
   isDarkMode: boolean;
@@ -8,24 +8,24 @@ type BenefitsProps = {
 const Benefits: React.FC<BenefitsProps> = ({ isDarkMode }) => {
   const benefits = [
     {
-      icon: <Sun className="h-12 w-12" />,
-      title: "Clean Energy",
-      description: "Solar power is a 100% clean, renewable energy source that reduces our reliance on fossil fuels"
+      icon: <Headset className="h-12 w-12" />,
+      title: "Exceptional Customer Support",
+      description: "We take pride in offering outstanding assistance to our clients. Our team is committed to providing fast, clear, and professional responses ensuring that your questions and needs are addressed as quickly as possible."
     },
     {
-      icon: <Leaf className="h-12 w-12" />,
-      title: "Environmental Impact",
-      description: "Reduce your carbon footprint and help combat climate change"
+      icon: <Check className="h-12 w-12" />,
+      title: "Permit Aprovals",
+      description: "Our designs get approved quickly thanks to our deep experience working with AHJs. With a high approval rate, we help you avoid delays and keep your project on schedule."
     },
     {
       icon: <DollarSign className="h-12 w-12" />,
-      title: "Cost Savings",
-      description: "Save up to 70% on your electricity bills with solar energy"
+      title: "Best Prices",
+      description: "We adjust our prices based on the size of the project, always ensuring the best cost‑benefit ratio. We have the most competitive prices in the entire market"
     },
     {
-      icon: <Battery className="h-12 w-12" />,
-      title: "Energy Independence",
-      description: "Generate your own electricity and reduce dependence on the grid"
+      icon: <Zap className="h-12 w-12" />,
+      title: "Fast Delivery",
+      description: "Our streamlined process ensures you get your designs faster, helping you move to installation without delays. We consistently deliver permit plans in 50% less time than the market standard. "
     }
   ];
 

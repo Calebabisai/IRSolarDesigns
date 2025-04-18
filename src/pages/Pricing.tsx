@@ -59,7 +59,7 @@ function Pricing() {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             <h2 className="text-3xl font-bold text-gray-900">PV Solar Design Pricing</h2>
-            <p className="mt-4 text-gray-600">Choose the perfect solar solution for your design</p>
+            <p className="mt-4 text-gray-600">Choose the perfect solution for your design</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
