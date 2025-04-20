@@ -37,13 +37,26 @@ function Contact() {
         description="Contact our solar energy experts for a free consultation. Get answers to your questions about solar installation, maintenance, and financing options."
         image="/src/assets/contact-image.jpg" // Ajusta a tu imagen real
       />
+      {/* Hero section with gradient background */}
+      <div className="bg-gradient-to-r from-yellow-50 to-blue-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`max-w-3xl mx-auto text-center ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} transition-all duration-700`}>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Contact Our Team
+            </h1>
+            <p className="text-xl text-gray-700 mb-8">
+            Contact us and tell us about the design
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transform transition-all duration-700 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            <h1 className="text-3xl font-bold text-gray-900">Contact Us</h1>
-            <p className="mt-4 text-gray-600">Contact us and tell us about the design</p>
+            <h1 className="text-3xl font-bold text-gray-900"></h1>
+            <p className="mt-4 text-gray-600"></p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

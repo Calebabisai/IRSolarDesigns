@@ -53,13 +53,26 @@ function Pricing() {
         description="Discover our affordable solar energy packages and financing options. Calculate your potential savings and ROI with our transparent pricing models."
         image="/src/assets/pricing-image.jpg" // Image for SEO >>>>>>>>>>>>>>>>>>>>>>>
       />
+      {/* Hero section with gradient background */}
+      <div className="bg-gradient-to-r from-yellow-50 to-blue-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`max-w-3xl mx-auto text-center ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} transition-all duration-700`}>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            PV Solar Design Pricing
+            </h1>
+            <p className="text-xl text-gray-700 mb-8">
+            Choose the perfect solution for your design
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transform transition-all duration-700 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            <h2 className="text-3xl font-bold text-gray-900">PV Solar Design Pricing</h2>
-            <p className="mt-4 text-gray-600">Choose the perfect solution for your design</p>
+            <h2 className="text-3xl font-bold text-gray-900"></h2>
+            <p className="mt-4 text-gray-600"></p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (

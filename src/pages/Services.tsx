@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Sun, Home, Battery, LineChart, FileCheck, User, MapPin, Plug, BatteryCharging } from 'lucide-react';
+import { Sun, Home, LineChart, FileCheck, User, MapPin, Plug, BatteryCharging, Search, File, Files } from 'lucide-react';
 import SeoHead from '../components/SeoHead';
+import TESTHOME from "../Assets/TESTHOME.jpg";
+import TESTSLD from "../Assets/TESTSLD.jpg";
+import placeholderImage from "../Assets/placeholder-image.png";
 
 // Definir tipos para evitar errores de TypeScript
 type RequirementCategory = 'basic' | 'photovoltaic' | 'roofMount' | 'groundMount' | 'electrical' | 'storage' | 'siteplan';
@@ -40,17 +43,17 @@ function Services() {
 
   const services = [
     {
-      icon: <Sun className="h-12 w-12 text-yellow-500" />,
+      icon: <Files className="h-12 w-12 text-yellow-500" />,
       title: "Solar Permit Packages",
       description: "Complete solar permit packages including site plans, electrical diagrams, structural analysis, and all required documentation."
     },
     {
-      icon: <Home className="h-12 w-12 text-yellow-500" />,
+      icon: <File className="h-12 w-12 text-yellow-500" />,
       title: "Plan Sets & Documentation",
       description: "Professional plan sets compliant with local jurisdiction requirements and designed for rapid approval."
     },
     {
-      icon: <Battery className="h-12 w-12 text-yellow-500" />,
+      icon: <Search className="h-12 w-12 text-yellow-500" />,
       title: "Compliance Review",
       description: "Thorough review of designs to ensure compliance with local building codes, fire codes, and electrical regulations."
     },
@@ -63,23 +66,22 @@ function Services() {
 
   const permitImages = [
     { 
-      src: "/src/assets/permit1.jpg", 
+      src: TESTHOME, 
       alt: "Solar Permit Plan Example - Site Design",
       title: "Site Design & Panel Layout",
       description: "Detailed site plans showing optimal solar panel placement for maximum efficiency"
     },
     { 
-      src: "/src/assets/permit2.jpg", 
+      src: TESTSLD, 
       alt: "Solar Permit Plan Example - Electrical Diagram", 
       title: "Electrical Diagrams",
       description: "Professional electrical diagrams meeting all local code requirements"
     }
   ];
 
-  // Eliminamos el array no utilizado que podría causar confusión
-  // const basicRequirements = [ ... ];
 
-  // Se define detailedRequirements como RequirementMap para garantizar que todas las propiedades estén correctas
+
+
   const detailedRequirements: RequirementMap = {
     basic: {
       title: "Basic Project Information",
@@ -215,6 +217,91 @@ function Services() {
                 </div>
               ))}
             </div>
+
+            {/* Permit Plan Details */}
+            <div className={`max-w-4xl mx-auto mt-20 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} transition-all duration-1000`}>
+              <h3 className="text-2xl font-semibold text-center mb-8">
+                What's Included in Our Permit Plans
+              </h3>
+              
+              <div className="bg-gradient-to-br from-yellow-50 to-blue-50 rounded-xl p-8 shadow-sm">
+                <p className="text-center text-gray-700 mb-8">
+                  Every permit plan we create includes comprehensive documentation to ensure smooth approval:
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <ol className="list-none space-y-3">
+                    {[
+                      "Title Sheet", 
+                      "Roof/Site Plan", 
+                      "Electrical Line Diagram", 
+                      "Equipment Labels", 
+                      "Placard", 
+                      "Attachment Plan"
+                    ].map((item, index) => (
+                      <li 
+                        key={index}
+                        className={`transform transition-all duration-500 ${
+                          isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+                        }`}
+                        style={{ transitionDelay: `${index * 70}ms` }}
+                      >
+                        <div className="flex items-center">
+                          <span className="flex-shrink-0 w-7 h-7 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-700 mr-3 font-semibold text-sm">
+                            {index + 1}
+                          </span>
+                          <span className="text-gray-800">{item}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                  
+                  <ol className="list-none space-y-3" start={7}>
+                    {[
+                      "Structural Components", 
+                      "Property Lines", 
+                      "Optimizer Tracking", 
+                      "Job Hazard Analysis", 
+                      "BOM Sheet", 
+                      { name: "Elevation View", isAdditional: true }
+                    ].map((item, index) => {
+                      const itemName = typeof item === 'string' ? item : item.name;
+                      const isAdditional = typeof item === 'object' && item.isAdditional;
+                      
+                      return (
+                        <li 
+                          key={index}
+                          className={`transform transition-all duration-500 ${
+                            isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+                          }`}
+                          style={{ transitionDelay: `${(index + 6) * 70}ms` }}
+                        >
+                          <div className="flex items-center">
+                            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-700 mr-3 font-semibold text-sm">
+                              {index + 7}
+                            </span>
+                            <span className={`${isAdditional ? 'text-yellow-600' : 'text-gray-800'}`}>
+                              {itemName}
+                              {isAdditional && (
+                                <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                                  Additional
+                                </span>
+                              )}
+                            </span>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <p className="text-sm text-gray-600 italic">
+                    Our documentation exceeds industry standards to minimize approval delays and inspection issues.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           
           {/* Example permit plans - 2 images with animation */}
@@ -222,36 +309,34 @@ function Services() {
             <h2 className="text-3xl font-bold text-center mb-8">
               Example Permit Plans
             </h2>
-            <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-              Our professional plan sets are designed for quick approval. Here are some examples of our work:
-            </p>
+
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               {permitImages.map((img, idx) => (
                 <div 
                   key={idx} 
-                  className={`bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-1000 ${
+                  className={`relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-1000 hover:scale-105 ${
                     imagesLoaded[idx] 
-                      ? 'scale-100 opacity-100' 
-                      : 'scale-95 opacity-0'
+                      ? 'opacity-100' 
+                      : 'opacity-0'
                   }`}
                 >
-                  <div className="relative h-80">
+                  <div className="h-80">
                     <img 
                       src={img.src} 
                       alt={img.alt} 
                       className="w-full h-full object-cover" 
                       onError={(e) => {
-                        // Añadimos un manejador de errores para cargar una imagen de respaldo si la original falla
-                        e.currentTarget.src = "/src/assets/placeholder-image.jpg";
+                        e.currentTarget.src = placeholderImage;
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                    {/* Overlay con texto */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">
                           {img.title}
                         </h3>
-                        <p className="text-white/80 text-sm">
+                        <p className="text-white/90 text-sm">
                           {img.description}
                         </p>
                       </div>
