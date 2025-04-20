@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SeoHead from '../components/SeoHead';
 import Benefits from '../components/Benefits';
 import Navbar from '../components/Navbar';
-import homeImage from "../assets/HOMEIMAGE.jpg"; 
+import homeImage from "../assets/home-image.jpg"; 
 import casa1Image from "../assets/HOMEONE.jpg";  
 import casa2Image from "../assets/HOMETWO.webp";  
 import casa3Image from "../assets/HOMETHREE.webp"; 
