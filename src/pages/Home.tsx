@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import SeoHead from '../components/SeoHead'; // Cambiado de SEO a SeoHead
+import SeoHead from '../components/SeoHead'; 
 import Benefits from '../components/Benefits';
 import homeImage from '../assets/Homeimage.jpg';
 import casa1Image from '../assets/CASA1.jpg';

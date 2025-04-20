@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Sun, Home, LineChart, FileCheck, User, MapPin, Plug, BatteryCharging, Search, File, Files } from 'lucide-react';
 import SeoHead from '../components/SeoHead';
-import TESTHOME from "../Assets/TESTHOME.jpg";
-import TESTSLD from "../Assets/TESTSLD.jpg";
-import placeholderImage from "../Assets/placeholder-image.png";
+import TESTHOME from "../assets/TESTHOME.jpg";
+import TESTSLD from "../assets/TESTSLD.jpg";
+import placeholderImage from "../assets/placeholder-image.png";
 
 // Definir tipos para evitar errores de TypeScript
 type RequirementCategory = 'basic' | 'photovoltaic' | 'roofMount' | 'groundMount' | 'electrical' | 'storage' | 'siteplan';
