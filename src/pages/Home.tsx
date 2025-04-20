@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import SeoHead from '../components/SeoHead'; 
+import SeoHead from '../components/SeoHead';
 import Benefits from '../components/Benefits';
-import homeImage from '../assets/Homeimage.jpg';
-import casa1Image from '../assets/CASA1.jpg';
-import casa2Image from '../assets/CASA2.webp';
-import casa3Image from '../assets/CASA3.webp';
+import Navbar from '../components/Navbar';
+import homeImage from "../assets/HOMEIMAGE.jpg"; 
+import casa1Image from "../assets/HOMEONE.jpg";  
+import casa2Image from "../assets/HOMETWO.webp";  
+import casa3Image from "../assets/HOMETHREE.webp"; 
 
 function Home() {
-  const [imageLoaded, setImageLoaded] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Removed unused isVisible state and its effect
 
