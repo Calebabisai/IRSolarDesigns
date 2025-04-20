@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Sun, Home, LineChart, FileCheck, User, MapPin, Plug, BatteryCharging, Search, File, Files } from 'lucide-react';
 import SeoHead from '../components/SeoHead';
-import TESTHOME from "../assets/TESTHOME.jpg";
-import TESTSLD from "../assets/TESTSLD.jpg";
+import TESTHOME from "/images/TESTHOME.jpg";
+import TESTSLD from "/images/TESTSLD.jpg";
 import placeholderImage from "../assets/placeholder-image.png";
 
 // Definir tipos para evitar errores de TypeScript

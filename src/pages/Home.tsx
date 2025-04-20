@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import SeoHead from '../components/SeoHead';
 import Benefits from '../components/Benefits';
 import Navbar from '../components/Navbar';
-import homeImage from "../assets/home-image.jpg"; 
-import casa1Image from "../assets/HOMEONE.jpg";  
-import casa2Image from "../assets/HOMETWO.webp";  
-import casa3Image from "../assets/HOMETHREE.webp"; 
+import homeImage from "/images/home-image.jpg"; 
+import casa1Image from "/images/HOMEONE.jpg";  
+import casa2Image from "/images/HOMETWO.webp";  
+import casa3Image from "/images/HOMETHREE.webp"; 
 
 function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -37,7 +37,7 @@ function Home() {
       <SeoHead 
         title="IR Solar Designs - Powering Your Future with Solar Energy" 
         description="Transform your home with sustainable energy solutions that save money and protect our planet. IR Solar Designs offers premium solar installations."
-        image={homeImage} // Cambiado de ruta relativa a variable importada
+        
       />
       <div className={`transition-colors duration-500 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
         {/* Hero Section with Navbar */}
