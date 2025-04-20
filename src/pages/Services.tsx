@@ -3,7 +3,7 @@ import { Sun, Home, LineChart, FileCheck, User, MapPin, Plug, BatteryCharging, S
 import SeoHead from '../components/SeoHead';
 import TESTHOME from "/images/TESTHOME.jpg";
 import TESTSLD from "/images/TESTSLD.jpg";
-import placeholderImage from "../assets/placeholder-image.png";
+import placeholderImage from "/images/placeholder-image.png";
 
 // Definir tipos para evitar errores de TypeScript
 type RequirementCategory = 'basic' | 'photovoltaic' | 'roofMount' | 'groundMount' | 'electrical' | 'storage' | 'siteplan';
