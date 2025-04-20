@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import SeoHead from '../components/SeoHead'; // Cambiado de SEO a SeoHead
 import Benefits from '../components/Benefits';
+import homeImage from '../assets/Homeimage.jpg';
+import casa1Image from '../assets/CASA1.jpg';
+import casa2Image from '../assets/CASA2.webp';
+import casa3Image from '../assets/CASA3.webp';
 
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -33,14 +37,14 @@ function Home() {
       <SeoHead 
         title="IR Solar Designs - Powering Your Future with Solar Energy" 
         description="Transform your home with sustainable energy solutions that save money and protect our planet. IR Solar Designs offers premium solar installations."
-        image="/src/assets/Homeimage.jpg" // Image for SEO >>>>>>>>>>>>>>>
+        image={homeImage} // Cambiado de ruta relativa a variable importada
       />
       <div className={`transition-colors duration-500 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
         {/* Hero Section with Navbar */}
         <div className="relative h-screen">
           <div className="absolute inset-0 bg-cover bg-center z-0 overflow-hidden">
             <img 
-              src="/src/assets/Homeimage.jpg" 
+              src={homeImage} 
               alt="Background" 
               className={`w-full h-full object-cover transition-all duration-1500 ease-in-out ${
                 imageLoaded 
@@ -85,21 +89,21 @@ function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
                 <img 
-                  src="/src/assets/CASA1.jpg" 
+                  src={casa1Image} 
                   alt="Solar Installation" 
                   className="w-full h-64 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
                 <img 
-                  src="/src/assets/CASA2.webp" 
+                  src={casa2Image} 
                   alt="Residential Solar" 
                   className="w-full h-64 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
                 <img 
-                  src="/src/assets/CASA3.webp" 
+                  src={casa3Image} 
                   alt="Solar Technology" 
                   className="w-full h-64 object-cover"
                 />
