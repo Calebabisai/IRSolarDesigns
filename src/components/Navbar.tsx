@@ -79,7 +79,7 @@ function Navbar({ isHome: isHomeProp = false }: NavbarProps) {
         <div className="flex justify-between items-center p-4 bg-gray-900 border-b border-gray-700">
           <div className="flex items-center">
             <img 
-              src="/src/assets/IRLOGO_WHITE.PNG" 
+              src="/images/IRLOGO_WHITE.png" 
               alt="Logo IRSolarDesigns" 
               className="h-12 w-auto mr-2" 
             />
