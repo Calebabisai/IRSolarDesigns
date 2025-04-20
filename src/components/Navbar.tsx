@@ -37,7 +37,7 @@ function Navbar({ isHome: isHomeProp = false }: NavbarProps) {
               <Link to="/" className="flex items-center">
                 <div className="relative overflow-visible" style={{ marginTop: '-10px' }}>
                   <img
-                    src={isHome ? "/src/assets/IRLOGO_WHITE.PNG" : "/src/assets/IRLOGO.PNG"}
+                    src={isHome ? "/images/IRLOGO_WHITE.png" : "/images/IRLOGO.png"}
                     alt="Logo IRSolarDesigns"
                     className="h-20 md:h-24 w-auto object-contain transform hover:scale-105 transition-transform duration-300" 
                   />
