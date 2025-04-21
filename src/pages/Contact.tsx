@@ -18,8 +18,33 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    
+    // Método para enviar los datos a Netlify
+    const form = e.target as HTMLFormElement;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        "form-name": "contact",
+        ...Object.fromEntries(new FormData(form))
+      }).toString()
+    })
+      .then(() => {
+        // Mostrar mensaje de éxito
+        alert("¡Message sent successfully!");
+        // Limpiar el formulario
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        // Mostrar mensaje de error
+        alert("Error sending the message. Please try again");
+        console.log(error);
+      });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -35,7 +60,7 @@ function Contact() {
       <SeoHead 
         title="Contact IR Solar Design" 
         description="Contact our solar energy experts for a free consultation. Get answers to your questions about solar installation, maintenance, and financing options."
-        image="/src/assets/contact-image.jpg" // Ajusta a tu imagen real
+        image="/images/contact-image.jpg" // Ajusta a tu imagen real
       />
       {/* Hero section with gradient background */}
       <div className="bg-gradient-to-r from-yellow-50 to-blue-50 py-16">
@@ -68,7 +93,20 @@ function Contact() {
               style={{ transitionDelay: '150ms' }}
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                
+                <p className="hidden">
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
                   <input
