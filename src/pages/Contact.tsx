@@ -8,7 +8,7 @@ function Contact() {
     name: '',
     email: '',
     phone: '',
-    message: '',
+    message: ''
   });
 
   useEffect(() => {
@@ -19,7 +19,6 @@ function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Método para enviar los datos a Netlify
     const form = e.target as HTMLFormElement;
     fetch("/", {
       method: "POST",
@@ -30,18 +29,10 @@ function Contact() {
       }).toString()
     })
       .then(() => {
-        // Mostrar mensaje de éxito
         alert("¡Message sent successfully!");
-        // Limpiar el formulario
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
       })
       .catch((error) => {
-        // Mostrar mensaje de error
         alert("Error sending the message. Please try again");
         console.log(error);
       });
@@ -162,9 +153,9 @@ function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-yellow-500 text-white py-3 px-4 text-lg rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition duration-300 shadow-md"
+                    className="w-full bg-yellow-500 text-white py-3 px-4 rounded-md hover:bg-yellow-600 transition duration-300"
                   >
-                    Send Message
+                    Submit
                   </button>
                 </div>
               </form>
