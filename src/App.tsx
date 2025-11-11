@@ -1,3 +1,18 @@
+/**
+ * App.tsx - Main Application Component
+ * 
+ * This is the root component of the IR Solar Designs application.
+ * It handles routing between different pages and wraps the entire
+ * application with the Router component.
+ * 
+ * Features:
+ * - React Router for client-side routing
+ * - Layout wrapper with Navbar and Footer
+ * - Scroll to top on route change
+ * 
+ * @component
+ */
+
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
